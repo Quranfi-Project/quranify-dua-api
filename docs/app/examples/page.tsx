@@ -16,7 +16,7 @@ export default function Examples() {
     {
       title: 'JavaScript (Fetch)',
       language: 'javascript',
-      code: `fetch('https://your-api.vercel.app/api/duas/protection')
+      code: `fetch('https://quranfi-dua-api.vercel.app/api/duas/protection')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));`,
@@ -26,7 +26,7 @@ export default function Examples() {
       language: 'javascript',
       code: `async function getDuas() {
   try {
-    const response = await fetch('https://your-api.vercel.app/api/duas/protection/1');
+    const response = await fetch('https://quranfi-dua-api.vercel.app/api/duas/protection/1');
     const dua = await response.json();
     console.log(dua);
   } catch (error) {
@@ -46,7 +46,7 @@ function DuaDisplay() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://your-api.vercel.app/api/duas/protection')
+    fetch('https://quranfi-dua-api.vercel.app/api/duas/protection')
       .then(res => res.json())
       .then(data => {
         setDuas(data);
@@ -76,14 +76,14 @@ function DuaDisplay() {
       code: `import requests
 
 # Get all duas
-response = requests.get('https://your-api.vercel.app/api/duas/protection')
+response = requests.get('https://quranfi-dua-api.vercel.app/api/duas/protection')
 duas = response.json()
 
 for dua in duas:
     print(f"{dua['reference']}: {dua['translation']}")
 
 # Get specific dua
-response = requests.get('https://your-api.vercel.app/api/duas/protection/1')
+response = requests.get('https://quranfi-dua-api.vercel.app/api/uas/protection/1')
 dua = response.json()
 print(dua['arabic'])`,
     },
@@ -93,7 +93,7 @@ print(dua['arabic'])`,
       code: `const axios = require('axios');
 
 // Get all duas
-axios.get('https://your-api.vercel.app/api/duas/forgive')
+axios.get('https://quranfi-dua-api.vercel.app/api/duas/forgive')
   .then(response => {
     console.log(response.data);
   })
@@ -104,7 +104,7 @@ axios.get('https://your-api.vercel.app/api/duas/forgive')
 // With async/await
 async function fetchDuas() {
   try {
-    const { data } = await axios.get('https://your-api.vercel.app/api/duas/rabbanas');
+    const { data } = await axios.get('https://quranfi-dua-api.vercel.app/api/duas/rabbanas');
     return data;
   } catch (error) {
     console.error('Error:', error);
@@ -115,13 +115,13 @@ async function fetchDuas() {
       title: 'cURL',
       language: 'bash',
       code: `# Get all duas in a category
-curl https://your-api.vercel.app/api/duas/protection
+curl https://quranfi-dua-api.vercel.app/api/duas/protection
 
 # Get specific dua by ID
-curl https://your-api.vercel.app/api/duas/protection/1
+curl https://quranfi-dua-api.vercel.app/api/duas/protection/1
 
 # Pretty print with jq
-curl https://your-api.vercel.app/api/duas/rabbanas | jq`,
+curl https://quranfi-dua-api.vercel.app/api/duas/rabbanas | jq`,
     },
   ];
 

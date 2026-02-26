@@ -101,7 +101,7 @@ export default function Home() {
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">JavaScript</span>
                 <button
-                  onClick={() => copyToClipboard(`fetch('https://your-api.vercel.app/api/duas/protection')
+                  onClick={() => copyToClipboard(`fetch('https://quranfi-dua-api.vercel.app/api/duas/protection')
   .then(res => res.json())
   .then(data => console.log(data));`, 0)}
                   className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
@@ -111,7 +111,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-900 dark:bg-gray-950 text-gray-100 p-6 rounded-lg overflow-x-auto">
                 <pre className="text-sm">
-{`fetch('https://your-api.vercel.app/api/duas/protection')
+{`fetch('https://quranfi-dua-api.vercel.app/api/duas/protection')
   .then(res => res.json())
   .then(data => console.log(data));`}
                 </pre>

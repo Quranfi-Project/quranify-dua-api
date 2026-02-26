@@ -33,17 +33,17 @@ export default function Docs() {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Base URL</h2>
           <div className="relative">
             <div className="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg font-mono text-sm text-blue-400">
-              https://your-api.vercel.app/api
+              https://quranfi-dua-api.vercel.app/api/
             </div>
             <button
-              onClick={() => copyToClipboard('https://your-api.vercel.app/api', 'base-url')}
+              onClick={() => copyToClipboard('https://quranfi-dua-api.vercel.app/api/', 'base-url')}
               className="absolute top-3 right-3 text-gray-400 hover:text-blue-400 transition-colors"
             >
               {copiedSection === 'base-url' ? '✓' : 'Copy'}
             </button>
           </div>
           <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm">
-            Replace <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-blue-600 dark:text-blue-400">your-api.vercel.app</code> with your actual Vercel deployment URL.
+            {/* Replace <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-blue-600 dark:text-blue-400">your-api.vercel.app</code> with your actual Vercel deployment URL. */}
           </p>
         </div>
 
