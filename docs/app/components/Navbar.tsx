@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FaHome, FaBook, FaCode, FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/docs', label: 'Documentation' },
-    { href: '/examples', label: 'Examples' },
+    { href: '/', label: 'Home', icon: FaHome },
+    { href: '/docs', label: 'Documentation', icon: FaBook },
+    { href: '/examples', label: 'Examples', icon: FaCode },
   ];
 
   return (
@@ -23,26 +24,31 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center space-x-2">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                  pathname === link.href
-                    ? 'bg-blue-900 text-blue-300'
-                    : 'text-gray-300 hover:bg-gray-800'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {links.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                    pathname === link.href
+                      ? 'bg-blue-900 text-blue-300'
+                      : 'text-gray-300 hover:bg-gray-800'
+                  }`}
+                >
+                  <Icon />
+                  <span>{link.label}</span>
+                </Link>
+              );
+            })}
             <a
-              href="https://github.com"
+              href="https://github.com/Quranfi-Project/quranify-dua-api"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-all"
+              className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-50 transition-all"
             >
-              GitHub
+              <FaGithub />
+              <span>GitHub</span>
             </a>
           </div>
         </div>
