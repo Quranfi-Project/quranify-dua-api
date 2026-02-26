@@ -19,7 +19,7 @@ git push origin main
 ### Step 3: Test Your API
 Your API will be live at:
 ```
-https://your-project-name.vercel.app/api/duas/protection
+https://quranfi-dua-api.vercel.app/api/duas/protection
 ```
 
 ## Alternative: CLI Deployment

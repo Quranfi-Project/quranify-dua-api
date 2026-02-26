@@ -27,7 +27,7 @@ app.get(`${api}`, (req, res) => {
         </style>
       </head>
       <body>
-        <h1>API is running at http://localhost:3000/api 🚀</h1>
+        <h1>API is running at https://quranfi-dua-api.vercel.app/api </h1>
       </body>
       </html>
     `);
